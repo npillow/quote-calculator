@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/quote-app-D1doU4Lv.js","assets/index-CF6u-5L4.js"])))=>i.map(i=>d[i]);
+import{g as e,t}from"./index-CF6u-5L4.js";var n=e(()=>t(()=>import(`./quote-app-D1doU4Lv.js`),__vite__mapDeps([0,1])),`QuoteApp`);export{n as component};
