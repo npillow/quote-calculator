@@ -1,0 +1,37 @@
+<!-- NP Quote Calculator — smooth page scroll; height updates only when scroll settles -->
+<div id="np-qc-wrap" style="width:100%;max-width:100%;margin:0;padding:0;overflow:hidden;overscroll-behavior:contain;touch-action:pan-y;-webkit-overflow-scrolling:touch;">
+  <iframe
+            id="np-qc-frame"
+            src="https://examination-modem-bracelets-specified.trycloudflare.com/?embed=1"
+            title="Group Benefits Quote Calculator"
+            loading="eager"
+            scrolling="no"
+            style="width:100%;max-width:100%;min-width:0;height:900px;border:0;display:block;margin:0;padding:0;overflow:hidden;touch-action:pan-y;pointer-events:auto;"
+          ></iframe>
+</div>
+<script>
+  (function () {
+      var frame = document.getElementById('np-qc-frame');
+      var wrap = document.getElementById('np-qc-wrap');
+      if (!frame) return;
+      var last = 0;
+      var pending = null;
+      function apply(h) {
+            var next = Math.min(Math.max(Math.round(h), 400), 6000);
+            if (Math.abs(next - last) < 20) return;
+            last = next;
+            frame.style.height = next + 'px';
+            if (wrap) wrap.style.height = next + 'px';
+      }
+      window.addEventListener('message', function (e) {
+            try {
+                    var d = e.data;
+                    if (!d || d.type !== 'np-qc-height') return;
+                    var h = Number(d.height);
+                    if (!h || h < 400) return;
+                    if (pending) clearTimeout(pending);
+                    pending = setTimeout(function () { apply(h); }, 100);
+            } catch (err) {}
+      });
+  })();
+</script>
