@@ -1,0 +1,50 @@
+name: Guard Pages CSS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "assets/**.css"
+      - "index.html"
+      - "404.html"
+
+permissions:
+  contents: write
+
+jobs:
+  restore-placeholder-css:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Replace PLACEHOLDER stylesheets
+        run: |
+          set -euo pipefail
+          good=""
+          for f in assets/*.css; do
+            if [ "$(wc -c < "$f")" -gt 1000 ] && grep -q "tailwindcss\|--color-navy" "$f"; then
+              good="$f"
+              break
+            fi
+          done
+          if [ -z "$good" ]; then
+            git show 01640b9549b59dd22ae689a0b2338e37f7c2e8cf:assets/styles-DvChyRMF.css > assets/_restored.css
+            good=assets/_restored.css
+          fi
+          changed=0
+          for f in assets/*.css; do
+            if [ "$(wc -c < "$f")" -lt 64 ] && grep -q "PLACEHOLDER" "$f"; then
+              cp "$good" "$f"
+              changed=1
+              echo "restored $f from $good"
+            fi
+          done
+          rm -f assets/_restored.css
+          if [ "$changed" = 1 ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/*.css
+            git commit -m "Restore Pages CSS overwritten with PLACEHOLDER"
+            git push
+          fi
