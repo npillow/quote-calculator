@@ -73,7 +73,6 @@
   html[data-np-embed="1"] #app {
     min-height: 0 !important;
     height: auto !important;
-    overflow: visible !important;
     overscroll-behavior-y: contain;
     touch-action: pan-y;
   }
@@ -235,4 +234,13 @@
     max-width: 100%;
     min-width: 0;
   }
+}
+
+/* Slider: never become its own scroll container (fixes double scrollbar on mobile) */
+[data-slot="slider"],
+[role="slider"],
+.relative.flex.w-full.touch-pan-y {
+  touch-action: pan-y;
+  overscroll-behavior: contain;
+  overflow: visible;
 }
