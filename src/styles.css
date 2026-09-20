@@ -73,6 +73,7 @@
   html[data-np-embed="1"] #app {
     min-height: 0 !important;
     height: auto !important;
+    overflow: visible !important;
     overscroll-behavior-y: contain;
     touch-action: pan-y;
   }
