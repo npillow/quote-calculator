@@ -1,3 +1,4 @@
 /*
-  Content-Security-Policy: frame-ancestors https://www.npbenefitservices.com https://npbenefitservices.com https://*.wixsite.com https://*.wix.com
-  X-Frame-Options: ALLOW-FROM https://www.npbenefitservices.com
+  Content-Security-Policy: frame-ancestors https://www.npbenefitservices.com https://npbenefitservices.com https://*.wixsite.com https://*.wix.com https://editor.wix.com https://*.editorx.io
+  X-Frame-Options: ALLOWALL
+*/
