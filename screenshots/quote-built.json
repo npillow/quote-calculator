@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8081/quote",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Get a quote · NP Benefit Services",
+      "hasCanvas": false,
+      "bodyTextLen": 770,
+      "bodyTextHash": "2681a21a8f6fb8c01abf39b026b467ad8d627956d638b060c23312204e8624d0",
+      "bodyTextPrefix": "Coverages Services About Quote Enroll 888-954-8999 Quote Get a g",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/quote-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Get a quote · NP Benefit Services",
+      "hasCanvas": false,
+      "bodyTextLen": 762,
+      "bodyTextHash": "605d394365ef56e5fcbb6c508c8e9e0963eadb6c1036466c92ac47a29855f7a6",
+      "bodyTextPrefix": "Enroll Call Coverages Services About Quote Quote Get a group quo",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/quote-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/quote-built.json"
+}

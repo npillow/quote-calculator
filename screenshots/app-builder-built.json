@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "NP Benefit Services",
+      "hasCanvas": false,
+      "bodyTextLen": 1703,
+      "bodyTextHash": "162ef900ca7ba21946c19b12ad9cdb9c8e2c4240cf38dca0e4993c90e4420aa8",
+      "bodyTextPrefix": "30 years · 888-954-8999 · Licensed CA / AZ / UT · no extra open ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "NP Benefit Services",
+      "hasCanvas": false,
+      "bodyTextLen": 1703,
+      "bodyTextHash": "162ef900ca7ba21946c19b12ad9cdb9c8e2c4240cf38dca0e4993c90e4420aa8",
+      "bodyTextPrefix": "30 years · 888-954-8999 · Licensed CA / AZ / UT · no extra open ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

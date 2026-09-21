@@ -1,0 +1,1 @@
+import{n as e}from"./createLucideIcon-CwI8KVjD.js";import{t}from"./utils-CHh0Vvkk.js";var n=e();function r({className:e,...r}){return(0,n.jsx)(`div`,{className:t(`rounded-xl border border-line/80 bg-card shadow-[0_1px_2px_rgb(12_39_68_/_0.04),0_8px_24px_rgb(12_39_68_/_0.06)]`,e),...r})}export{r as t};
